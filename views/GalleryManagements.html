@@ -102,10 +102,10 @@
           </a>
         </div>
       </div>
-      <div class="statistics-table__container overflow-auto lg:w-full">
+      <div class="gallery-management-from statistics-table__container overflow-auto lg:w-full">
         <div class="statistics-table__header py-3 items-center justify-between">
           <h4 class="statistics-table__title">Gallery Management</h4>
-          <button onclick="switchBetween2Element('gallery management')"
+          <button onclick="toggleActiveComponent('.gallery-management-from','.gallery-management-to')"
             class="new-request__btn bg-invite-link px-3 py-2 gap-[5px] flex items-center text-white text-xs font-light rounded-md">
             <img src="/public/images/icon/withdraw_requests/Plus.svg" alt="plus-img" />
             New
@@ -154,7 +154,7 @@
           <div class="table w-full p-5 pt-10px min-w-[700px]">
             <div class="table__header">
               <div class="flex justify-center items-center">
-                <input type="checkbox" onchange="selectAllTableRows(this)"
+                <input type="checkbox" onchange="selectAllRows()" value="false"
                   class="table-header__title appearance-none w-4 h-4 bg-white rounded-[3px] checked:bg-invite-link" />
               </div>
               <div>
@@ -252,7 +252,8 @@
         </div>
       </div>
       <!-- new gallery -->
-      <section class="new-gallery-image hidden card__hover rounded-25px mb-5 bg-white hover:drop-shadow-md w-full">
+      <form
+        class="gallery-management-to new-gallery-image hidden card__hover rounded-25px mb-5 bg-white hover:drop-shadow-md w-full">
         <div class="statistics-table__header items-center justify-between">
           <h4 class="statistics-table__title">Create Image</h4>
         </div>
@@ -280,12 +281,12 @@
           </div>
         </div>
         <div class="flex justify-start items-center pb-5 pl-[10px] lg:pl-5 gap-[10px]">
-          <button
+          <button type="submit"
             class="btn__primary bg-badge__green text-white rounded-[5px] p-2 px-4 m-0 text-xs font-light">Submit</button>
-          <button
-            class="btn__secondary text-xs font-light text-normal border-[1px] p-2 px-4 rounded-[5px] border-[#393939]/10">Cancell</button>
+          <button type="button"
+            class="cancel-btn btn__secondary text-xs font-light text-normal border-[1px] p-2 px-4 rounded-[5px] border-[#393939]/10">Cancell</button>
         </div>
-      </section>
+      </form>
     </section>
   </div>
 </body>

@@ -102,10 +102,10 @@
           </a>
         </div>
       </div>
-      <div class="statistics-table__container overflow-auto lg:w-full">
+      <div class="admin-management-from statistics-table__container overflow-auto lg:w-full">
         <div class="statistics-table__header py-3 items-center justify-between">
           <h4 class="statistics-table__title">Admin Management</h4>
-          <button onclick="switchBetween2Element('admin management')"
+          <button onclick="toggleActiveComponent('.admin-management-from','.admin-management-to')"
             class="new-request__btn bg-badge__green px-2 py-2 gap-[5px] flex items-center text-white text-xs font-light rounded-md">
             <img src="/public/images/icon/withdraw_requests/Plus.svg" alt="plus-img" />
             Create Admin User
@@ -154,7 +154,7 @@
           <div class="table w-full p-5 pt-10px min-w-[700px]">
             <div class="table__header">
               <div class="flex justify-center items-center">
-                <input type="checkbox" onchange="selectAllTableRows(this)"
+                <input type="checkbox" onchange="selectAllRows()"
                   class="table-header__title appearance-none w-4 h-4 bg-white rounded-[3px] checked:bg-invite-link" />
               </div>
               <div>
@@ -246,7 +246,8 @@
         </div>
       </div>
       <!-- new admin user -->
-      <section class="new-admin-management hidden card__hover rounded-25px mb-5 bg-white hover:drop-shadow-md w-full">
+      <form
+        class="admin-management-to new-admin-management hidden card__hover rounded-25px mb-5 bg-white hover:drop-shadow-md w-full">
         <div class="statistics-table__header items-center justify-between">
           <h4 class="statistics-table__title">Create Admin User</h4>
         </div>
@@ -280,36 +281,16 @@
           </div>
         </div>
         <div class="form__submition flex justify-start items-center pb-5 pl-[10px] lg:pl-5 gap-[10px]">
-          <button class="btn__primary bg-badge__green text-white rounded-[5px] p-2 px-4 m-0 text-xs font-light">
-            Submit
-          </button>
-          <button
-            class="btn__secondary text-xs font-light text-normal border-[1px] p-2 px-4 rounded-[5px] border-[#393939]/10">
-            Cancell
-          </button>
+          <button type="submit"
+            class="btn__primary bg-badge__green text-white rounded-[5px] p-2 px-4 m-0 text-xs font-light">Submit</button>
+          <button type="button"
+            class="cancel-btn btn__secondary text-xs font-light text-normal border-[1px] p-2 px-4 rounded-[5px] border-[#393939]/10">Cancell</button>
         </div>
-      </section>
+      </form>
     </section>
   </div>
   </div>
   </div>
-  <div
-    class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-    <div class="border-r-green-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">your request approved successfuly</p>
-    </div>
-  </div>
-  <div
-    class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-    <div class="border-r-red-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">your request deleted successfuly</p>
-    </div>
-  </div>
-
   </div>
 </body>
 
