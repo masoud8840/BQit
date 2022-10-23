@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--  Linking style file  -->
-    <link rel="stylesheet" href="/public/styles/style.css" />
-    <!-- Linking script file -->
-    <script src="/public/scripts/script.js" defer></script>
-    <link rel="shortcut icon" href="/public/images/Logo.svg">
+  <!--  Linking style file  -->
+  <link rel="stylesheet" href="/public/styles/style.css" />
+  <!-- Linking script file -->
+  <script src="/public/scripts/script.js" defer></script>
+  <link rel="shortcut icon" href="/public/images/Logo.svg">
   <title>BQit | User Management</title>
 </head>
 
@@ -22,101 +22,66 @@
       <ul class="navigation__inner">
         <li class="navigation__list">
           <a href="./index.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Dashboard.svg"
-              alt="dashboard-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Dashboard.svg" alt="dashboard-img" class="navigation__img" />
             <span class="navigation__text">Dashboard</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="#joineology" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Jineology.svg"
-              alt="jineology-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Jineology.svg" alt="jineology-img" class="navigation__img" />
             <span class="navigation__text">Jineology</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
           <a href="./TreeDiagram.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Tree_Diagram.svg"
-              alt="tree-diagram-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Tree_Diagram.svg" alt="tree-diagram-img" class="navigation__img" />
             <span class="navigation__text">Tree Diagram</span>
           </a>
         </li>
         <li class="navigation__list md:w-full">
           <a href="./DepositRequests.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Deposite_Requests.svg"
-              alt="deposit-request-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Deposite_Requests.svg" alt="deposit-request-img"
+              class="navigation__img" />
             <span class="navigation__text">Deposit Requests</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./UserManagement.html" class="navigation__link active">
-            <img
-              src="/public/images/icon/menu/User_Management_Active.svg"
-              alt="user-management-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/User_Management_Active.svg" alt="user-management-img"
+              class="navigation__img" />
             <span class="navigation__text">User Management</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./WithdrawRequests.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Withdraw_Request.svg"
-              alt="withdraw-requests-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Withdraw_Request.svg" alt="withdraw-requests-img"
+              class="navigation__img" />
             <span class="navigation__text">Withdraw Requests</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./GalleryManagements.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Gallery_Management.svg"
-              alt="gallery-management-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Gallery_Management.svg" alt="gallery-management-img"
+              class="navigation__img" />
             <span class="navigation__text">Gallery Management</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./AdminManagement.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Admin_Management.svg"
-              alt="admin-management-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Admin_Management.svg" alt="admin-management-img"
+              class="navigation__img" />
             <span class="navigation__text">Admin Management</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="./Reports.html" class="navigation__link">
-            <img
-              src="/public/images/icon/menu/Reports.svg"
-              alt="reports-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Reports.svg" alt="reports-img" class="navigation__img" />
             <span class="navigation__text">Reports</span>
           </a>
         </li>
         <li class="navigation__list">
           <a href="#logout" class="navigation__link mt-20">
-            <img
-              src="/public/images/icon/menu/Logout.svg"
-              alt="logout-img"
-              class="navigation__img"
-            />
+            <img src="/public/images/icon/menu/Logout.svg" alt="logout-img" class="navigation__img" />
             <span class="navigation__text">Logout</span>
           </a>
         </li>
@@ -144,12 +109,13 @@
           <ul class="flex gap-[15px]">
             <li>
               <button class="table__btn text-sm lg:text-lg table-btn__active"
-                onclick="toggleDepositRequestsTabs('active users', this)">Active
+                onclick="toggleActiveTab('user-management-component', 0)">Active
                 Users</button>
             </li>
             <li>
               <button class="table__btn text-sm lg:text-lg"
-                onclick="toggleDepositRequestsTabs('pending users', this)">Pending Users</button>
+                onclick="toggleActiveTab('user-management-component', 1)">Pending
+                Users</button>
             </li>
           </ul>
         </div>
@@ -176,7 +142,7 @@
               class="search__btn bg-search-btn w-20 py-1 rounded-[3px] text-white text-xs font-light">Search</button>
           </div>
         </div>
-        <div class="active-users__table overflow-auto">
+        <div class="user-management-component active-users__table overflow-auto">
           <div class="table user-management__table w-full p-5 pt-10px min-w-[1200px]">
             <div class="table__header">
               <div class="flex justify-center items-center">
@@ -297,7 +263,7 @@
           </div>
         </div>
         <!-- pending users -->
-        <div class="pending-users__table hidden overflow-auto">
+        <div class="user-management-component pending-users__table hidden overflow-auto">
           <div class="table user-management__table w-full p-5 pt-10px min-w-[1100px]">
             <div class="table__header">
               <div class="flex justify-center items-center">
@@ -410,23 +376,6 @@
   </div>
   </div>
   </div>
-  <div
-    class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-    <div class="border-r-green-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">your request approved successfuly</p>
-    </div>
-  </div>
-  <div
-    class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-    <div class="border-r-red-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">your request deleted successfuly</p>
-    </div>
-  </div>
-
   </div>
 </body>
 

@@ -138,12 +138,12 @@
         <div class="statistics-table__subheader flex flex-col gap-[10px] p-10px">
           <h4 class="text-[15px] text-normal font-light">Group Actions</h4>
           <div class="pl-5 flex gap-2">
-            <button onclick="togglePopup('approve')"
+            <button
               class="btn__green flex items-center gap-1 bg-profit-amount px-4 py-2 rounded-10px text-white text-xs font-light">
               <img src="/public/images/icon/deposit_requests/Check.svg" alt="check-img" />
               Approve
             </button>
-            <button onclick="togglePopup('deleted')"
+            <button
               class="btn__red flex items-center gap-1 bg-withdrawal-amount px-4 py-2 rounded-10px text-white text-xs font-light">
               <img src="/public/images/icon/deposit_requests/Delete.svg" alt="delete-img" />
               Delete
@@ -287,22 +287,6 @@
         </div>
       </section>
     </section>
-  </div>
-  <div
-    class="pop-up pop-up__approved fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-    <div class="border-r-green-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Approved</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">your request approved successfuly</p>
-    </div>
-  </div>
-  <div
-    class="pop-up pop-up__deleted fixed hidden drop-shadow-md items-center gap-3 bg-white bottom-3 right-2 p-4 py-3 rounded-10px">
-    <img src="/public/images/icon/pop-up/Check.png" alt="pop-up-img" class="w-7 md:w-12">
-    <div class="border-r-red-400 border-r-4 pr-3">
-      <h2 class="text-normal font-medium lg:text-lg">Delete</h2>
-      <p class="text-[#a9a9a9] text-sm lg:text-base">your request deleted successfuly</p>
-    </div>
   </div>
 </body>
 

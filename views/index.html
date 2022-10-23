@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/public/styles/style.css" />
     <!-- Linking script file -->
     <script src="/public/scripts/script.js" defer></script>
-    <link rel="shortcut icon" href="/public/images/Logo.svg">
+    <link rel="shortcut icon" href="/public/images/Logo.svg" />
     <title>BQit | Dashboard</title>
   </head>
 
@@ -160,7 +160,10 @@
               <h4 class="user__name">Hesam Safari</h4>
               <p class="user__email">hesamsafari@gmail.com</p>
               <div class="user__password flex">
-                <button class="password-toggler">
+                <button
+                  class="password-toggler"
+                  onclick="togglePasswordVisibility()"
+                >
                   <img
                     src="/public/images/icon/dashboard/Eye.svg"
                     alt="eye-img"
@@ -187,6 +190,9 @@
                     src="/public/images/icon/dashboard/PasswordCharecter.svg"
                     alt="password"
                   />
+                </div>
+                <div class="user__password-text hidden">
+                  <p class="text-normal">some password here</p>
                 </div>
               </div>
             </div>
