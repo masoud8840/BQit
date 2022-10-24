@@ -45,13 +45,14 @@ function toggleActiveComponent(from, to) {
 }
 
 
-let isAllRowsSelected = false;
-function selectAllRows() {
-    isAllRowsSelected = !isAllRowsSelected
-    const otherRowsCheckbox = document.querySelectorAll('.table__body input[type="checkbox"]');
+function selectAllRows(subCheckboxesSelector, headerCheckbox) {
+    let isAllRowsSelected = headerCheckbox.checked;
+
+    const otherRowsCheckbox = document.querySelectorAll(`${subCheckboxesSelector} .table__body input[type="checkbox"]`);
     isAllRowsSelected ? otherRowsCheckbox.forEach(checkbox => {
         checkbox.checked = true
     }) : otherRowsCheckbox.forEach(checkbox => {
         checkbox.checked = false
     })
+    isAllRowsSelected = !isAllRowsSelected
 }
